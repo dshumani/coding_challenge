@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include "_header.html" %}
+<body>
+
+{% block content %}
+    <h1>Please Click Button To Get Session!</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">GET A SESSION KEY</button>
+    </form>
+{% endblock %}
+</body>
+</html>
+
+
+
